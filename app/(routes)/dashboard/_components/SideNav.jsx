@@ -44,7 +44,7 @@ const SideNav = () => {
         <Image src={'/logo.svg'} alt='logo' height={160} width={150} className='mb-3'/>
         <div>
             {MenuList.map((items, index)=>(
-                <Link href={items.link}>
+                <Link href={items.link} key={index}>
 
                 <h2 className={`flex gap-3 items-center p-4 mb-2 cursor-pointer text-primary font-bold hover:bg-primary hover:rounded-md hover:text-secondary active:bg-secondary
                     ${path == items.link && `text-secondary bg-primary rounded-md`}

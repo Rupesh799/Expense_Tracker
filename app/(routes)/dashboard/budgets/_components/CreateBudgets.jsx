@@ -15,9 +15,11 @@ import { db } from "@/utils/dbConfig";
 import { Budgets } from "@/utils/schema";
 import { useUser } from "@clerk/nextjs";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
-const CreateBudgets = () => {
+const CreateBudgets = ({refreshData}) => {
 
+  const router = useRouter()
     const {user} = useUser()
     const [name , setName] = useState("");
     const [amount , setAmount] = useState("");
@@ -30,15 +32,19 @@ const CreateBudgets = () => {
         }).returning({insertedId:Budgets.id})
 
         if(data){
+            refreshData();
             toast('Budget is Created')
         }
+        
+
+
     }
   return (
     <div>
     
       <Dialog>
         <DialogTrigger asChild>
-        <div className="p-4 flex flex-col items-center bg-green-100 rounded-md font-bold hover:shadow-md cursor-pointer border-2 border-dashed">
+        <div className="p-10 flex flex-col items-center bg-green-100 rounded-md font-bold hover:shadow-md cursor-pointer border-2 border-dashed h-[150px]">
         <h2>+</h2>
         <h2>Create New Budget</h2>
       </div>
@@ -54,7 +60,7 @@ const CreateBudgets = () => {
 
               <div className="mt-2">
                 <h2 className="font-medium text-black my-2">Amount</h2>
-                <Input placeholder="Rs. 2000" onChange={(e)=>setAmount(e.target.value)}/>
+                <Input placeholder="Rs. 2000" type="number" onChange={(e)=>setAmount(e.target.value)}/>
               </div>
 
              
