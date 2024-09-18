@@ -28,7 +28,7 @@ const SideNav = () => {
             "id": 3,
             "name": "Expenses",
             "icon": ShoppingBag,
-            "link": "/dashboard/expenses",
+            "link": `/dashboard/expenses`,
         },
         {
             "id":4,

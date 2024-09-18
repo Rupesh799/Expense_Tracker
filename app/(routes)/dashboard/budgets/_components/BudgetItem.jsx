@@ -8,7 +8,9 @@ const BudgetItem = ({budget}) => {
     return percentage.toFixed(2)
   }
   return (
-    <Link href={`/dashboard/expenses/${budget?.id}`} className=' bg-slate-200 rounded-md shadow-md flex flex-col p-4 cursor-pointer hover:shadow-lg h-[150px]'>
+    <Link href={`/dashboard/expenses/${budget?.id}`} className='bg-gradient-to-r from-cyan-200 to-blue-500 rounded-md shadow-md flex flex-col p-4 cursor-pointer hover:shadow-lg h-[150px]'
+    
+   >
         <div className='flex justify-between items-center'>
                
                <div className='font-bold items-center'>
@@ -17,7 +19,7 @@ const BudgetItem = ({budget}) => {
                 <h4>{budget?.totalItem} Items</h4>
                </div>
 
-               <div className='font-bold text-primary items-center'>
+               <div className='font-bold text-secondary items-center'>
                  <h4>Rs. {budget?.amount}</h4>
                </div>
 
@@ -27,8 +29,8 @@ const BudgetItem = ({budget}) => {
         <div className='mt-5'>
 
         <div className='flex items-center justify-between mb-2'>
-            <h4 className='text-xs text-slate-400'>Rs. {budget.totalSpend?budget?.totalSpend:0} spent</h4>
-            <h4 className='text-xs text-slate-400'>Rs. {budget.amount - budget.totalSpend} Remaining</h4>
+            <h4 className='text-xs text-slate-900'>Rs. {budget.totalSpend?budget?.totalSpend:0} spent</h4>
+            <h4 className='text-xs text-slate-900'>Rs. {budget.amount - budget.totalSpend} Remaining</h4>
             {/* <h4>Rs. {budget?.}</h4> */}
         </div>
         
