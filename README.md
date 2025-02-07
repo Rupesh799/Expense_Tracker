@@ -1,4 +1,21 @@
+### Step 1: Retrieve the current README file content
+I have already retrieved the content of the README.md file. 
+
+### Step 2: Update the README file with technology details
+I will add a section in the README file with details about the technologies used: Next.js, Tailwind CSS, Clerk, and Drizzle ORM.
+
+---
+
+```markdown
+# Expense Tracker
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Technologies Used
+- **Next.js**: The React framework for production.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Clerk**: Authentication and user management.
+- **Drizzle ORM**: TypeScript-first ORM for SQL databases.
 
 ## Getting Started
 
@@ -31,6 +48,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app).
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+### Follow-up Steps
+1. Commit and push the updated README.md file back to the repository.
+2. Verify the changes on the GitHub repository to ensure the README is updated correctly.
+
+Would you like me to proceed with committing and pushing the changes?
