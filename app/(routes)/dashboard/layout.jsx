@@ -6,7 +6,7 @@ import { db } from "@/utils/dbConfig";
 import { Budgets } from "@/utils/schema";
 import { useUser } from "@clerk/nextjs";
 import { eq } from "drizzle-orm";
-import NotFoundPage from "./not-found";
+import NotFoundPage from "../../not-found";
 import { notFound } from "next/navigation";
 
 const layout = ({ children }) => {
